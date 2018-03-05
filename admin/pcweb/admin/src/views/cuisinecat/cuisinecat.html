@@ -1,0 +1,95 @@
+<div class="main-content" id="cuisinecat">
+
+    <!-- toolbar Start-->
+    <section class="bs-panel">
+        <div class="bs-panel-body clearfix">
+            <div class="btn-group">
+
+
+                <a class="btn btn-primary">大分类</a>
+
+
+            </div>
+            <div class="btn-group pull-right">
+                <a class="btn btn-success j-add">增加</a>
+                <!--<a class="btn btn-warning j-export">导出excel</a>-->
+                <!--<a class="btn btn-info j-edit">修改</a>-->
+                <a class="btn btn-danger j-del">删除</a>
+            </div>
+
+        </div>
+    </section>
+    <!-- toolbar End -->
+
+    <!-- sift Start -->
+    <section class="bs-panel">
+        <header class="panel-heading">筛选</header>
+        <div class="bs-panel-body">
+            <form class="j-search-form">
+                <div class="form-group-sm">
+                    <div class="row">
+                        <div class="col-md-3 mb10">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon no-bg">分类名称：</span>
+                                <input type="text" class="form-control" placeholder="" name="cat_name"/>
+                            </div>
+                        </div>
+                    <input type="submit" class="sr-only"/>
+                </div>
+            </form>
+        </div>
+
+        <div class="bs-panel-footer">
+            <a class="btn btn-info btn-sm j-search">查询</a>
+        </div>
+    </section>
+    <!-- sift End -->
+
+
+
+
+    <!-- datagird Start -->
+    <section class="u-datagrid">
+        <div class="j-datagrid"></div>
+    </section>
+    <!-- datagird End -->
+
+    <!-- dialog Start-->
+    <section class="sr-only">
+        <div class="j-formDialog">
+            <form class="form-horizontal j-form">
+
+
+                <input type="text" class="sr-only" name="cat_id" placeholder=""/>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">分类名称</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" value="" name="cat_name">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">分类类型</label>
+                    <div class="col-sm-10">
+                        <select name="type" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">商品分类</option>
+                            <option value="1">菜式分类</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">分类简介</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" value="" name="cat_describe">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <!-- dialog End-->
+</div>
+

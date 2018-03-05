@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <!-- @@include ./template/_template_head.html -->
+</head>
+<body>
+
+<div id="main-warp" style="display: none;">
+    <!-- @@include ./scripts/components/top/top.html -->
+    <!-- @@include ./scripts/components/sidebar/sidebar.html -->
+</div>
+<!-- @@include ./template/_fn.html -->
+
+<!-- build:js scripts/main.min.js -->
+<script src="pack/config.js"></script>
+<script src="pack/javascript.expand.js"></script>
+<script src="pack/lib/jquery.js"></script>
+<script src="pack/lib/jquery-validation/jquery.validate.js"></script>
+<script src="pack/lib/jquery.cookie.js"></script>
+<script src="pack/lib/base64.min.js"></script>
+<script src="pack/lib/moment.js"></script>
+<script src="pack/lib/md5.js"></script>
+<script src="pack/lib/easyui/easyloader.js"></script>
+<script src="pack/lib/easyui/plugins/jquery.parser.js"></script>
+<script src="pack/lib/easyui/plugins/jquery.panel.js"></script>
+<script src="pack/lib/easyui/plugins/jquery.resizable.js"></script>
+<script src="pack/lib/easyui/plugins/jquery.linkbutton.js"></script>
+<script src="pack/lib/easyui/plugins/jquery.pagination.js"></script>
+<script src="pack/lib/easyui/plugins/jquery.tabs.js"></script>
+<script src="pack/lib/easyui/plugins/jquery.datagrid.js"></script>
+<script src="pack/lib/bootstrap/dropdown.js"></script>
+<script src="pack/lib/bootstrap/modal.js"></script>
+<script src="pack/lib/bootstrap/tab.js"></script>
+<script src="pack/lib/bootstrap-plugin/jquery.dialog.js"></script>
+<script src="pack/lib/bootstrap-plugin/jquery.layer.js"></script>
+<!--<script src="pack/lib/bootstrap-multiselect/bootstrap-multiselect.js"></script>-->
+<!--<script src="pack/lib/bootstrap-datepicker/bootstrap-datepicker.js"></script>-->
+<script src="pack/lib/minicolors/jquery.minicolors.js"></script>
+<script src="pack/lib/distpicker/distpicker.data.js"></script>
+<script src="pack/lib/distpicker/distpicker.js"></script>
+<script src="pack/lib/FileAPI/FileAPI.js"></script>
+<script src="pack/lib/jquery.nicescroll.js"></script>
+<script src="pack/jquery.serializeObject.js"></script>
+<script src="pack/form.js"></script>
+<script src="pack/validate.init.js"></script>
+<script src="pack/global.js"></script>
+<!-- /build -->
+<script src="scripts/lib/echarts.js"></script>
+<script src="My97DatePicker/WdatePicker.js"></script>
+<script src="scripts/init.js"></script>
+<!-- @@include ./template/_require.html -->
+<script>
+    require([
+        'scripts/components/sidebar/sidebar'
+    ], function(updateMenu) {
+        updateMenu(true);
+    });
+</script>
+
+</body>
+</html>

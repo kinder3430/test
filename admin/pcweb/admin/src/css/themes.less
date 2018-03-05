@@ -1,0 +1,243 @@
+@import (reference) 'global';
+
+canvas {display: block;}
+@sidebar-width: 170px;
+.lineFeed {word-wrap:break-word ;}
+
+.g-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 40px;
+  background-color: @color-base;
+  color: #fff;
+  padding: 0 20px;
+  .u-logo {
+    font-size: 20px;
+    padding-right: 12px;
+    padding-top: 4px;
+    display: inline-block;
+    font-style: inherit;
+  }
+  .m-topMenu {
+    position: absolute;
+    right: 12px;
+    top: 0;
+  }
+  span {
+    line-height: 40px;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+/*
+ * 导航
+ */
+.g-side {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  bottom: 0;
+  width: @sidebar-width;
+  padding-top: 10px;
+  background-color: #e5e5e5;
+  border-right: 1px solid #ccc;
+  overflow: hidden;
+  outline: none;
+  //overflow-y: auto;
+  padding-bottom: 80px;
+}
+
+#m-menu {
+  li > ul {
+    display: none
+  }
+  li p {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin: 0;
+    cursor: pointer;
+  }
+  i {
+    font-size: 12px
+  }
+  //一级
+  > li {
+    > p {
+      background-color: #f3f3f3;
+      border-bottom: 1px solid #ccc;
+      display: block;
+      padding: 4px 18px 4px 10px;
+      text-align: left;
+      font-size: 16px;
+      i {
+        float: right;
+        padding-top: 4px;
+      }
+    }
+    //二级
+    > ul {
+      border-bottom: 1px solid #ccc;
+    }
+    > ul > li {
+      background-color: #fff;
+      > p {
+        color: #333;
+        height: 26px;
+        line-height: 26px;
+        padding-left: 36px;
+        background: url(img/tree-icons.png) no-repeat 12px -52px;
+        .ell();
+      }
+    }
+    //二级 end
+  }
+  //一级 end
+  .menu-active > p {
+    background-color: #ffffff;
+    span {
+      color: #3584c9;
+    }
+  }
+  .nav-sub-active {
+    //> a
+    span {
+      color: #3584c9;
+    }
+  }
+}
+
+.g-main {
+  //margin-left: @sidebar-width;
+  padding: 40px 0 0 @sidebar-width;
+  .main-content {
+    padding: 10px 20px 0;
+    //background: @color-bg;
+  }
+}
+
+.tab-nav {
+  width: 100px;
+  text-align: center;
+  a {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.bs-panel {
+  border: 1px solid #dddddd;
+  background: #ffffff;
+  margin-bottom: 12px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  .bs-panel-body {
+    padding: 15px;
+  }
+  .bs-panel-footer {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #dddddd;
+  }
+}
+
+.bs-modal-sm {
+  width: 500px;
+}
+
+.u-datagrid {
+  height: 600px;
+}
+
+.bg {
+  background: @color-bg;
+}
+
+#tabs > .tabs-panels > .panel > .panel-body {  .bg;  }
+
+//.j-formDialog
+.form-group {margin-bottom: 20px;}
+
+.validatebox {position: relative;}
+label.error {
+  color: darken(@brand-danger,5%);
+  position: absolute;
+  bottom: -22px;
+  font-size: 12px;
+}
+
+input.error,textarea.error,select.error {
+  border: 1px solid @brand-danger;
+  background: lighten(@brand-danger,35%) !important;
+}
+input.error:focus,textarea.error:focus {
+  .border-and-shadow(@brand-danger)
+}
+
+//input.valid {
+//  border: 1px solid @brand-success;
+//}
+//
+//input.valid:focus {
+//  .validate(@brand-success);
+//}
+
+
+.border-and-shadow(@color) {
+  border-color: @color;
+  .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+  &:focus {
+    border-color: darken(@color, 10%);
+    @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten(@color, 20%);
+    .box-shadow(@shadow);
+  }
+}
+
+.roleTree {
+  label {
+    padding-left: 10px;
+  }
+}
+//权限树
+.roleTree_1 {
+  margin-left: 40px;
+  .roleTree_2 {
+    margin-left: 60px;
+    label {
+      .ell();
+      width:19%;
+      font-weight:100;
+    }
+  }
+}
+
+.dialogSift {
+  margin-bottom: 5px !important;
+  .bs-panel-body {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .bs-panel-footer {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+}
+
+.dialogImg {display: block;width: 100px;height: 100px;}
+.j-imgDetail {cursor: pointer;}
+
+@import "fileapi";
+
+.biaoqing {.clearfix();
+  li {width: 92px;height: 80px;float: left;cursor: pointer;
+    img {width: 100%}
+  }
+}

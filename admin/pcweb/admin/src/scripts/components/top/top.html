@@ -1,0 +1,48 @@
+<header id="header" class="g-head">
+    <em class="pull-left u-logo">管理后台</em>
+    <span class="m-topMenu">
+      欢迎您,
+      <span id="adminName"></span>
+        &nbsp;|&nbsp;
+        <a href="javascript:void (0);" id="changePwd">修改密码</a>
+        &nbsp;|&nbsp;
+        <a href="javascript:void(0);" id="logout">退出</a>
+    </span>
+</header>
+
+<section class="sr-only">
+    <div id="changePwdDialog">
+    <form class="form-horizontal" id="changePwdForm">
+
+        <input type="text" class="sr-only" name="user_id" id="userId" placeholder=""/>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">原密码</label>
+            <div class="col-sm-10 validatebox">
+                <input type="password" class="form-control" name="old_login_pwd"
+                       placeholder=""
+                       data-rule-required="true" data-msg-required="请输原密码">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">新密码</label>
+            <div class="col-sm-10 validatebox">
+                <input type="password" class="form-control" name="new_login_pwd"
+                       placeholder="" id="new_login_pwd"
+                       data-rule-required="true" data-msg-required="请输新密码"
+                       data-rule-rangelength="[4,20]" data-msg-rangelength="请输入4~20位密码">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">再次输入</label>
+            <div class="col-sm-10 validatebox">
+                <input type="password" class="form-control"
+                       placeholder=""
+                       data-rule-equalTo="#new_login_pwd" data-msg-required="你两次输入的密码不相同">
+            </div>
+        </div>
+
+    </form>
+</div>
+</section>

@@ -1,0 +1,136 @@
+<div class="main-content" id="goods">
+
+    <!-- toolbar Start-->
+    <section class="bs-panel">
+        <div class="bs-panel-body clearfix">
+            <div class="btn-group">
+
+
+                <a class="btn btn-primary">商品管理</a>
+
+
+            </div>
+            <div class="btn-group pull-right">
+
+
+                <a class="btn btn-success j-add">增加</a>
+                <!--<a class="btn btn-info j-edit">修改</a>-->
+                <a class="btn btn-danger j-del">删除</a>
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- toolbar End -->
+
+    <!-- datagird Start -->
+    <section class="u-datagrid">
+        <div class="j-datagrid"></div>
+    </section>
+    <!-- datagird End -->
+
+    <!-- dialog Start-->
+    <section class="sr-only">
+        <div class="j-formDialog">
+            <form class="form-horizontal j-form">
+
+                <input type="text" class="sr-only" name="id" placeholder=""/>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">商品名称</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" value="" name="name">
+                    </div>
+                </div>
+                <!-- @@include ../../template/dialog/_gridModel.html {"model":"productCateModel","txt":"分类","id":"item_cat_id","name":"item_cat_name"} -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">商品图片</label>
+                    <div class="col-sm-10">
+                        <!-- @@include ../../template/dialog/_img_upload.html {"txt":"","key":"thumb","note":"推荐尺寸:800*800"} -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">商品描述</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" value="" name="depict">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">商品价格</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" value="" name="price">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">关键字</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" value="" name="keywords">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">规格</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" value="" name="unit">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">进货单位规格</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" value="" name="stock_unit">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">产地</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" value="" name="origin">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">库存</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" value="" name="inventory">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">商品类型</label>
+                    <div class="col-sm-10">
+                        <select name="type" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">自营商品</option>
+                            <option value="1">代售商品</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">排序</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" value="" name="rank">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">推荐商品</label>
+                    <div class="col-sm-10">
+                        <select name="recommend" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">不推荐</option>
+                            <option value="1">推荐</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">审核</label>
+                    <div class="col-sm-10">
+                        <select name="status" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">未审核</option>
+                            <option value="1">已审核</option>
+                            <option value="2">删除</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- dialog End-->
+</div>
+

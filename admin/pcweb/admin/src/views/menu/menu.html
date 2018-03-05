@@ -1,0 +1,118 @@
+<div class="main-content" id="menu">
+
+    <!-- toolbar Start-->
+    <section class="bs-panel">
+        <div class="bs-panel-body clearfix">
+            <div class="btn-group">
+
+
+                <a class="btn btn-primary">菜式管理</a>
+
+
+            </div>
+            <div class="btn-group pull-right">
+
+
+                <a class="btn btn-success j-add">增加</a>
+                <!--<a class="btn btn-info j-edit">修改</a>-->
+                <a class="btn btn-danger j-del">删除</a>
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- toolbar End -->
+
+    <!-- datagird Start -->
+    <section class="u-datagrid">
+        <div class="j-datagrid"></div>
+    </section>
+    <!-- datagird End -->
+
+    <!-- dialog Start-->
+    <section class="sr-only">
+        <div class="j-formDialog">
+            <form class="form-horizontal j-form">
+                <input type="text" class="sr-only" name="menu_id" placeholder=""/>
+                <!-- @@include ../../template/dialog/_gridModel.html {"model":"CaiCatModel","txt":"菜式分类","id":"cat_id","name":"cat_name"} -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">菜式图片</label>
+                    <div class="col-sm-10">
+                        <!-- @@include ../../template/dialog/_img_upload.html {"txt":"","key":"thumb","note":"推荐尺寸:800*800"} -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">菜式名称</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" value="" name="menu_name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">菜式内容</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control required" name="menu_content"  data-rule-required="true" cols="32" rows="4"></textarea>
+                        <!--<input type="text" class="form-control" placeholder="" value="" name="menu_content">-->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">菜式上传者</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" value="" name="menu_author">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">菜式关键字</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" value="" name="menu_keywords">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">简介</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" value="" name="synopsis">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">排序</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" placeholder="" value="" name="menu_sort">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">审核</label>
+                    <div class="col-sm-10">
+                        <select name="menu_status" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">未审核</option>
+                            <option value="1">已审核</option>
+                            <option value="2">删除</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">是否显示</label>
+                    <div class="col-sm-10">
+                        <select name="is_show" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">显示</option>
+                            <option value="1">隐藏</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">推荐</label>
+                    <div class="col-sm-10">
+                        <select name="is_recommend" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">不推荐</option>
+                            <option value="1">推荐</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- dialog End-->
+</div>
+

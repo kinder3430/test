@@ -1,0 +1,103 @@
+<div class="main-content" id="order">
+
+    <!-- toolbar Start-->
+    <section class="bs-panel">
+        <div class="bs-panel-body clearfix">
+            <div class="btn-group">
+
+
+                <a class="btn btn-primary">采购管理</a>
+
+
+            </div>
+            <div class="btn-group pull-right">
+                <!--<a class="btn btn-success j-add">增加</a>-->
+                <a class="btn btn-warning j-e">导出excel</a>
+                <!--<a class="btn btn-info j-edit">修改</a>-->
+                <a class="btn btn-danger j-del">删除</a>
+            </div>
+
+        </div>
+    </section>
+    <!-- toolbar End -->
+
+    <!-- sift Start -->
+    <section class="bs-panel">
+        <header class="panel-heading">筛选</header>
+        <div class="bs-panel-body">
+            <form class="j-search-form">
+                <div class="form-group-sm">
+                    <div class="row">
+                        <div class="col-md-3 mb10">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon no-bg">订单号：</span>
+                                <input type="text" class="form-control" placeholder="" name="order_sn"/>
+                            </div>
+                        </div>
+                    <input type="submit" class="sr-only"/>
+                </div>
+            </form>
+        </div>
+
+        <div class="bs-panel-footer">
+            <a class="btn btn-info btn-sm j-search">查询</a>
+        </div>
+    </section>
+    <!-- sift End -->
+
+
+
+
+    <!-- datagird Start -->
+    <section class="u-datagrid">
+        <div class="j-datagrid"></div>
+    </section>
+    <!-- datagird End -->
+
+    <!-- dialog Start-->
+    <section class="sr-only">
+        <div class="j-formDialog">
+            <form class="form-horizontal j-form">
+
+
+                <input type="text" class="sr-only" name="id" placeholder=""/>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">类别</label>
+                    <div class="col-sm-10">
+                        <select name="order_status" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">未确认</option>
+                            <option value="1">已确认</option>
+                            <option value="2">已取消</option>
+                            <option value="3">无效</option>
+                            <option value="4">退货</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">类别</label>
+                    <div class="col-sm-10">
+                        <select name="shipping_status" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">未发货</option>
+                            <option value="1">已发货</option>
+                            <option value="2">已取消</option>
+                            <option value="3">备货中</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">操作备注</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" value="" name="action_note">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- dialog End-->
+</div>
+

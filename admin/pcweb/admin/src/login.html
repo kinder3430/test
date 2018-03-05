@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <!-- @@include ./template/_template_head.html -->
+</head>
+<body class="login-body">
+<div class="container">
+    <form class="form-signin" id="login">
+        <div class="form-signin-heading text-center">
+            <h1 class="sign-title">后台</h1>
+        </div>
+        <div class="login-wrap">
+            <input type="text" class="form-control" placeholder="帐号" autofocus name="user_login_name" id="username" value="test1"/>
+            <input type="password" class="form-control" placeholder="密码" name="user_login_pwd" id="password" value="123456"/>
+            <input type="submit" value="登录" class="btn btn-lg btn-login btn-block"/>
+        </div>
+    </form>
+</div>
+
+<!-- build:js scripts/main.min.js -->
+<script src="pack/config.js"></script>
+<script src="pack/lib/jquery.js"></script>
+
+<script src="pack/lib/jquery.cookie.js"></script>
+<script src="pack/lib/base64.min.js"></script>
+<script src="pack/lib/md5.js"></script>
+
+<script src="pack/lib/jquery-validation/jquery.validate.js"></script>
+
+<script src="pack/lib/bootstrap/modal.js"></script>
+<script src="pack/lib/bootstrap-plugin/jquery.dialog.js"></script>
+<script src="pack/lib/bootstrap-plugin/jquery.layer.js"></script>
+
+<script src="pack/jquery.serializeObject.js"></script>
+<script src="pack/form.js"></script>
+
+<script src="pack/validate.init.js"></script>
+<!-- /build -->
+
+<!-- @@include ./template/_require.html -->
+
+<script>
+    require([
+        'scripts/customize/util'
+    ],function(util) {
+
+        $("#login").on("submit", function() {
+
+            if(!$('#username').val() || !$('#password').val()) {
+                $.layer.message('提示：', '请填写帐号密码', 'warning');
+                return false;
+            }
+
+            $("form").bsForm('submit', {
+                url: util.getInterface("admin/login"),
+                onSubmit: function(param) {
+                    param.user_login_pwd = md5(param.user_login_pwd);
+                    return $.extend(param, {});
+                },
+                success: function(result) {
+                    var status = result.ret,
+                        desc = result.info || "未知的错误，请联系相关工作人员",
+                        resultInfo = {};
+                    var ri = result.info;
+
+                    if (status == 1) {
+                        resultInfo = JSON.stringify({
+                            username:   ri.user_login,
+                            userId:     ri.id,
+                            roleId:    ri.role_id,
+                            roleName:   '',
+                        });
+
+                        var info = Base64.encode(resultInfo),
+                                date = new Date();
+                        date.setTime(date.getTime() + (60 * 60 * 1000)); //1小时
+                        var pathArr = window.location.pathname.split('/');
+                        pathArr.pop();
+                        $.cookie('info', info, {
+                            path: pathArr.join('/'),
+                            expires: date
+                        });
+                        $.cookie('tabs', '{}', {
+                            path: pathArr.join('/')
+                        });
+
+                        $.layer.message('提示：','登录成功！', 'success');
+
+                        setTimeout(function() {
+                            window.location.href = "index.html";
+                        }, 2000);
+
+                    } else if (status == 40000) {
+                        $.layer.message('提示：', desc, 'warning');
+                    } else {
+                        $.layer.message('提示：', '未知错误', 'danger');
+                    }
+
+                },
+                onLoadError: function() {
+                    $.layer.message('提示：', "未知的错误，请联系相关工作人员", 'danger');
+                }
+
+            });
+
+            return false;
+        });
+
+    })
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,353 @@
+<div class="main-content" id="signUpDetails">
+
+    <!-- toolbar Start-->
+    <section class="bs-panel">
+        <div class="bs-panel-body clearfix">
+            <div class="btn-group">
+
+
+                <a class="btn btn-primary">菜单查询管理</a>
+
+
+            </div>
+            <div class="btn-group pull-right">
+
+
+                <a class="btn btn-success j-add">增加</a>
+                <!--<a class="btn btn-info j-edit">修改</a>-->
+                <a class="btn btn-danger j-del">删除</a>
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- toolbar End -->
+
+    <!-- sift Start -->
+    <section class="bs-panel">
+        <header class="panel-heading">筛选</header>
+        <div class="bs-panel-body">
+            <form class="j-search-form">
+
+                <div class="form-group-sm">
+                    <div class="row">
+                        <div class="col-md-3 mb10">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon no-bg">活动名称：</span>
+                                <input type="text" class="form-control" placeholder="" name="title"/>
+                            </div>
+                        </div>
+                    <input type="submit" class="sr-only"/>
+                </div>
+
+                <div class="form-group-sm">
+                    <div class="row">
+                        <div class="col-md-3 mb10">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon no-bg">赛组名称：</span>
+                                <input type="text" class="form-control" placeholder="" name="grp_name"/>
+                            </div>
+                        </div>
+                        <input type="submit" class="sr-only"/>
+                    </div>
+            </form>
+        </div>
+
+        <div class="bs-panel-footer">
+            <a class="btn btn-info btn-sm j-search">查询</a>
+        </div>
+    </section>
+    <!-- sift End -->
+
+    <!-- datagird Start -->
+    <section class="u-datagrid">
+        <div class="j-datagrid"></div>
+    </section>
+    <!-- datagird End -->
+
+    <!-- dialog Start-->
+    <section class="sr-only">
+        <div class="j-formDialog">
+            <form class="form-horizontal j-form">
+
+
+                <input type="text" class="sr-only" name="id" placeholder=""/>
+
+                <!-- @@include ../../template/dialog/_gridModel.html {"model":"eventModel","txt":"活动分类","id":"activity_id","name":"title"} -->
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">手机号码</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="moblie"
+                               placeholder=""
+                               data-rule-required="true" data-msg-required="请输入手机号码">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">姓名</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="user_name"
+                               placeholder=""
+                               data-rule-required="true" data-msg-required="请输入姓名">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">性别</label>
+                    <div class="col-sm-10 validatebox">
+                        <select name="sex" class="form-control required">
+                            <option value="0">男</option>
+                            <option value="1">女</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">血型</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="blood"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">身份证</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="ident"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">头衔</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="title"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">组别</label>
+                    <div class="col-sm-10 validatebox">
+                        <select name="grp" class="form-control required">
+                            <option value="1">专业组</option>
+                            <option value="2">量产组</option>
+                            <option value="3">UTV组</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">组别名</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="grp_name"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">车队</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="car_team"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">车型</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="car"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">排量</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="volume"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">颜色</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="color"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">是否通过</label>
+                    <div class="col-sm-10 validatebox">
+                        <select name="controls" class="form-control required">
+                            <option value="false">未通过</option>
+                            <option value="true">通过</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">缴费状态</label>
+                    <div class="col-sm-10 validatebox">
+                        <select name="pay_status" class="form-control required">
+                            <option value="0">未缴费</option>
+                            <option value="1">已缴费</option>
+                            <option value="2">已退款</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">赛事</label>
+                    <div class="col-sm-10 validatebox">
+                        <select name="match_step" class="form-control required">
+                            <option value="0">未入围</option>
+                            <option value="1">排位赛</option>
+                            <option value="2">预赛</option>
+                            <option value="3">决赛</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">是否显示抽签结果</label>
+                    <div class="col-sm-10 validatebox">
+                        <select name="controls" class="form-control required">
+                            <option value="false">隐藏</option>
+                            <option value="true">显示</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">车号</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="start_no"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">排位赛排位</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="start_index"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">预赛排位</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="start_index2"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">决赛排位</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="start_index3"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">排位赛车道</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="start_carno"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">预赛车道</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="start_carno2"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">决赛车道</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="start_carno3"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">排位赛成绩</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="match_score"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">预赛成绩</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="match_score2"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">决赛成绩</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="match_score3"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">排位赛名次</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="rank"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">预赛名次</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="rank2"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">决赛名次</label>
+                    <div class="col-sm-10 validatebox">
+                        <input type="text" class="form-control required" name="rank3"
+                               placeholder=""
+                               data-rule-required="true">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <!-- dialog End-->
+</div>

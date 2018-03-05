@@ -1,0 +1,76 @@
+<div class="main-content" id="activityitem">
+
+    <!-- toolbar Start-->
+    <section class="bs-panel">
+        <div class="bs-panel-body clearfix">
+            <div class="btn-group">
+
+
+                <a class="btn btn-primary">商品管理</a>
+
+
+            </div>
+            <div class="btn-group pull-right">
+
+
+                <a class="btn btn-success j-add">增加</a>
+                <!--<a class="btn btn-info j-edit">修改</a>-->
+                <a class="btn btn-danger j-del">删除</a>
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- toolbar End -->
+
+    <!-- datagird Start -->
+    <section class="u-datagrid">
+        <div class="j-datagrid"></div>
+    </section>
+    <!-- datagird End -->
+
+    <!-- dialog Start-->
+    <section class="sr-only">
+        <div class="j-formDialog">
+            <form class="form-horizontal j-form">
+
+                <input type="text" class="sr-only" name="ag_id" placeholder=""/>
+                <!-- @@include ../../template/dialog/_gridModel.html {"model":"itemsModel","txt":"商品名称","id":"goods_id","name":"goods_name"} -->
+                <!-- @@include ../../template/dialog/_gridModel.html {"model":"activitysModel","txt":"活动","id":"activity_id","name":"activity_name"} -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">活动开始时间</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control required" name="ag_start_time" placeholder="" data-rule-required="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">活动结束时间</label>
+                    <div class="col-sm-10">
+                        <input  type="date" class="form-control required" name="ag_end_time" placeholder="" data-rule-required="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">排序</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" value="" name="rank">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">审核</label>
+                    <div class="col-sm-10">
+                        <select name="status" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">未审核</option>
+                            <option value="1">已审核</option>
+                            <option value="2">已过期</option>
+                            <option value="3">删除</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- dialog End-->
+</div>
+
